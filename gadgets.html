@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gadgets · RSI hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <h1>RSI hub</h1>
+            </div>
+            <nav class="menu">
+                <a href="indexRSI.html">Home</a>
+                <a href="catalog.html">Catalog</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Gadgets</h2>
+            <p>Thoughtful everyday tools designed to keep your workflow clean and connected.</p>
+        </div>
+    </section>
+
+    <section class="products">
+        <div class="products-intro">
+            <h3 class="section-title">Category</h3>
+            <p class="products-label">Gadgets</p>
+            <h2 class="products-title">Refined everyday tools</h2>
+            <p class="products-copy">Browse sleek gadgets built to simplify daily routines with intelligent design.</p>
+        </div>
+
+        <div class="products-grid">
+            <article class="product-card" data-category="gadgets">
+                <div class="product-card__image">
+                    <img src="https://via.placeholder.com/600x750?text=Magnetic+Charger" alt="Magnetic Charger">
+                </div>
+                <div class="product-card__info">
+                    <span class="product-card__category">Gadgets</span>
+                    <span class="product-card__name">Magnetic Charger</span>
+                    <span class="product-card__price">₽5,490</span>
+                    <button class="product-card__button">Buy</button>
+                </div>
+            </article>
+            <article class="product-card" data-category="gadgets">
+                <div class="product-card__image">
+                    <img src="https://via.placeholder.com/600x750?text=Smart+Tracker" alt="Smart Tracker">
+                </div>
+                <div class="product-card__info">
+                    <span class="product-card__category">Gadgets</span>
+                    <span class="product-card__name">Smart Tracker</span>
+                    <span class="product-card__price">₽6,750</span>
+                    <button class="product-card__button">Buy</button>
+                </div>
+            </article>
+            <article class="product-card" data-category="gadgets">
+                <div class="product-card__image">
+                    <img src="https://via.placeholder.com/600x750?text=Portable+Stand" alt="Portable Stand">
+                </div>
+                <div class="product-card__info">
+                    <span class="product-card__category">Gadgets</span>
+                    <span class="product-card__name">Portable Stand</span>
+                    <span class="product-card__price">₽4,990</span>
+                    <button class="product-card__button">Buy</button>
+                </div>
+            </article>
+            <article class="product-card" data-category="gadgets">
+                <div class="product-card__image">
+                    <img src="https://via.placeholder.com/600x750?text=Slim+USB+Hub" alt="Slim USB Hub">
+                </div>
+                <div class="product-card__info">
+                    <span class="product-card__category">Gadgets</span>
+                    <span class="product-card__name">Slim USB Hub</span>
+                    <span class="product-card__price">₽3,980</span>
+                    <button class="product-card__button">Buy</button>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 RSI hub</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const categoryPills = document.querySelectorAll('.category-pill');
+            const productCards = document.querySelectorAll('.product-card');
+            const catalogDropdown = document.querySelector('.dropdown');
+            const catalogToggle = document.querySelector('.dropdown-toggle');
+            const catalogLinks = document.querySelectorAll('.dropdown-menu a');
+
+            function closeDropdown() {
+                if (!catalogDropdown) return;
+                catalogDropdown.classList.remove('open');
+                catalogToggle.setAttribute('aria-expanded', 'false');
+            }
+
+            function openDropdown() {
+                if (!catalogDropdown) return;
+                catalogDropdown.classList.add('open');
+                catalogToggle.setAttribute('aria-expanded', 'true');
+            }
+
+            if (catalogToggle) {
+                catalogToggle.addEventListener('click', function (event) {
+                    event.stopPropagation();
+                    const isOpen = catalogDropdown.classList.contains('open');
+                    if (isOpen) {
+                        closeDropdown();
+                    } else {
+                        openDropdown();
+                    }
+                });
+            }
+
+            document.addEventListener('click', function () {
+                closeDropdown();
+            });
+
+            if (catalogLinks) {
+                catalogLinks.forEach(link => {
+                    link.addEventListener('click', function () {
+                        closeDropdown();
+                    });
+                });
+            }
+
+            if (catalogDropdown) {
+                catalogDropdown.addEventListener('click', function (event) {
+                    event.stopPropagation();
+                });
+            }
+
+            categoryPills.forEach(pill => {
+                pill.addEventListener('click', function () {
+                    const category = this.getAttribute('data-category');
+                    categoryPills.forEach(p => p.classList.remove('active'));
+                    this.classList.add('active');
+                    productCards.forEach(card => {
+                        if (category === 'all' || card.getAttribute('data-category') === category) {
+                            card.classList.remove('hidden');
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

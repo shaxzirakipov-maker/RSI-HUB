@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio · RSI hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <h1>RSI hub</h1>
+            </div>
+            <nav class="menu">
+                <a href="indexRSI.html">Home</a>
+                <a href="catalog.html">Catalog</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Audio</h2>
+            <p>Designed sound experiences for listening, working, and creating with clarity.</p>
+        </div>
+    </section>
+
+    <section class="products">
+        <div class="products-intro">
+            <h3 class="section-title">Category</h3>
+            <p class="products-label">Audio</p>
+            <h2 class="products-title">Premium listening essentials</h2>
+            <p class="products-copy">Find sleek headphones and audio tools crafted to elevate every moment.</p>
+        </div>
+
+        <div class="products-grid">
+            <article class="product-card" data-category="audio">
+                <div class="product-card__image">
+                    <img src="https://via.placeholder.com/600x750?text=Studio+Headphones" alt="Studio Headphones">
+                </div>
+                <div class="product-card__info">
+                    <span class="product-card__category">Audio</span>
+                    <span class="product-card__name">Studio Wireless Headphones</span>
+                    <span class="product-card__price">₽24,490</span>
+                    <button class="product-card__button">Buy</button>
+                </div>
+            </article>
+            <article class="product-card" data-category="audio">
+                <div class="product-card__image">
+                    <img src="https://via.placeholder.com/600x750?text=Soundbar" alt="Wave Soundbar">
+                </div>
+                <div class="product-card__info">
+                    <span class="product-card__category">Audio</span>
+                    <span class="product-card__name">Wave Soundbar</span>
+                    <span class="product-card__price">₽18,200</span>
+                    <button class="product-card__button">Buy</button>
+                </div>
+            </article>
+            <article class="product-card" data-category="audio">
+                <div class="product-card__image">
+                    <img src="https://via.placeholder.com/600x750?text=In+Ear" alt="In-Ear Studio Buds">
+                </div>
+                <div class="product-card__info">
+                    <span class="product-card__category">Audio</span>
+                    <span class="product-card__name">In-Ear Studio Buds</span>
+                    <span class="product-card__price">₽12,900</span>
+                    <button class="product-card__button">Buy</button>
+                </div>
+            </article>
+            <article class="product-card" data-category="audio">
+                <div class="product-card__image">
+                    <img src="https://via.placeholder.com/600x750?text=Desk+Speaker" alt="Desk Speaker">
+                </div>
+                <div class="product-card__info">
+                    <span class="product-card__category">Audio</span>
+                    <span class="product-card__name">Desk Speaker</span>
+                    <span class="product-card__price">₽14,300</span>
+                    <button class="product-card__button">Buy</button>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 RSI hub</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const categoryPills = document.querySelectorAll('.category-pill');
+            const productCards = document.querySelectorAll('.product-card');
+            const catalogDropdown = document.querySelector('.dropdown');
+            const catalogToggle = document.querySelector('.dropdown-toggle');
+            const catalogLinks = document.querySelectorAll('.dropdown-menu a');
+
+            function closeDropdown() {
+                if (!catalogDropdown) return;
+                catalogDropdown.classList.remove('open');
+                catalogToggle.setAttribute('aria-expanded', 'false');
+            }
+
+            function openDropdown() {
+                if (!catalogDropdown) return;
+                catalogDropdown.classList.add('open');
+                catalogToggle.setAttribute('aria-expanded', 'true');
+            }
+
+            if (catalogToggle) {
+                catalogToggle.addEventListener('click', function (event) {
+                    event.stopPropagation();
+                    const isOpen = catalogDropdown.classList.contains('open');
+                    if (isOpen) {
+                        closeDropdown();
+                    } else {
+                        openDropdown();
+                    }
+                });
+            }
+
+            document.addEventListener('click', function () {
+                closeDropdown();
+            });
+
+            if (catalogLinks) {
+                catalogLinks.forEach(link => {
+                    link.addEventListener('click', function () {
+                        closeDropdown();
+                    });
+                });
+            }
+
+            if (catalogDropdown) {
+                catalogDropdown.addEventListener('click', function (event) {
+                    event.stopPropagation();
+                });
+            }
+
+            categoryPills.forEach(pill => {
+                pill.addEventListener('click', function () {
+                    const category = this.getAttribute('data-category');
+                    categoryPills.forEach(p => p.classList.remove('active'));
+                    this.classList.add('active');
+                    productCards.forEach(card => {
+                        if (category === 'all' || card.getAttribute('data-category') === category) {
+                            card.classList.remove('hidden');
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

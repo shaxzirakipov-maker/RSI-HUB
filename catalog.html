@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog · RSI hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <h1>RSI hub</h1>
+            </div>
+            <nav class="menu">
+                <a href="indexRSI.html">Home</a>
+                <a href="catalog.html" class="active">Catalog</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Catalog</h2>
+            <p>Explore our complete collection of premium tech products.</p>
+        </div>
+    </section>
+
+    <section class="catalog-controls">
+        <div class="controls-container">
+            <div class="search-wrapper">
+                <input type="text" id="product-search" placeholder="Search products..." class="search-input">
+            </div>
+            <div class="category-nav">
+                <button class="category-btn active" data-category="all">All</button>
+                <button class="category-btn" data-category="smartphones">Smartphones</button>
+                <button class="category-btn" data-category="audio">Audio</button>
+                <button class="category-btn" data-category="gadgets">Gadgets</button>
+                <button class="category-btn" data-category="accessories">Accessories</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="products">
+        <section class="category-section" id="section-smartphones">
+            <div class="products-intro">
+                <h2 class="section-title">Smartphones</h2>
+                <p class="products-copy">Handpicked mobile devices built for modern productivity and effortless style.
+                </p>
+            </div>
+
+            <div class="products-grid">
+                <article class="product-card" data-category="smartphones">
+                    <div class="product-card__image">
+                        <img src="https://via.placeholder.com/600x750?text=Edge+Pro" alt="Edge Pro Smartphone">
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Smartphones</span>
+                        <span class="product-card__name">Edge Pro Smartphone</span>
+                        <span class="product-card__price">₽74,990</span>
+                        <button class="product-card__button">Buy</button>
+                    </div>
+                </article>
+                <article class="product-card" data-category="smartphones">
+                    <div class="product-card__image">
+                        <img src="https://via.placeholder.com/600x750?text=Nova+XL" alt="Nova XL Smartphone">
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Smartphones</span>
+                        <span class="product-card__name">Nova XL</span>
+                        <span class="product-card__price">₽68,490</span>
+                        <button class="product-card__button">Buy</button>
+                    </div>
+                </article>
+                <article class="product-card" data-category="smartphones">
+                    <div class="product-card__image">
+                        <img src="https://via.placeholder.com/600x750?text=Core+5G" alt="Core 5G Smartphone">
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Smartphones</span>
+                        <span class="product-card__name">Core 5G</span>
+                        <span class="product-card__price">₽59,990</span>
+                        <button class="product-card__button">Buy</button>
+                    </div>
+                </article>
+                <article class="product-card" data-category="smartphones">
+                    <div class="product-card__image">
+                        <img src="https://via.placeholder.com/600x750?text=Studio+Phone" alt="Studio Phone">
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Smartphones</span>
+                        <span class="product-card__name">Studio Phone</span>
+                        <span class="product-card__price">₽81,200</span>
+                        <button class="product-card__button">Buy</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="category-section" id="section-audio">
+            <div class="products-intro">
+                <h2 class="section-title">Audio</h2>
+                <p class="products-copy">Premium audio equipment for immersive sound experiences.</p>
+            </div>
+
+            <div class="products-grid">
+                <article class="product-card" data-category="audio">
+                    <div class="product-card__image">
+                        <img src="https://via.placeholder.com/600x750?text=Studio+Headphones" alt="Studio Headphones">
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Audio</span>
+                        <span class="product-card__name">Studio Wireless Headphones</span>
+                        <span class="product-card__price">₽24,490</span>
+                        <button class="product-card__button">Buy</button>
+                    </div>
+                </article>
+                <article class="product-card" data-category="audio">
+                    <div class="product-card__image">
+                        <img src="https://via.placeholder.com/600x750?text=Soundbar" alt="Wave Soundbar">
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Audio</span>
+                        <span class="product-card__name">Wave Soundbar</span>
+                        <span class="product-card__price">₽18,200</span>
+                        <button class="product-card__button">Buy</button>
+                    </div>
+                </article>
+                <article class="product-card" data-category="audio">
+                    <div class="product-card__image">
+                        <img src="https://via.placeholder.com/600x750?text=In+Ear" alt="In-Ear Studio Buds">
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Audio</span>
+                        <span class="product-card__name">In-Ear Studio Buds</span>
+                        <span class="product-card__price">₽12,900</span>
+                        <button class="product-card__button">Buy</button>
+                    </div>
+                </article>
+                <article class="product-card" data-category="audio">
+                    <div class="product-card__image">
+                        <img src="https://via.placeholder.com/600x750?text=Desk+Speaker" alt="Desk Speaker">
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Audio</span>
+                        <span class="product-card__name">Desk Speaker</span>
+                        <span class="product-card__price">₽14,300</span>
+                        <button class="product-card__button">Buy</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="category-section" id="section-gadgets">
+            <div class="products-intro">
+                <h2 class="section-title">Gadgets</h2>
+                <p class="products-copy">Innovative gadgets designed for everyday convenience.</p>
+            </div>
+
+            <div class="products-grid">
+                <article class="product-card" data-category="gadgets">
+                    <div class="product-card__image">
+                        <img src="https://via.placeholder.com/600x750?text=Magnetic+Charger" alt="Magnetic Charger">
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Gadgets</span>
+                        <span class="product-card__name">Magnetic Charger</span>
+                        <span class="product-card__price">₽5,490</span>
+                        <button class="product-card__button">Buy</button>
+                    </div>
+                </article>
+                <article class="product-card" data-category="gadgets">
+                    <div class="product-card__image">
+                        <img src="https://via.placeholder.com/600x750?text=Smart+Tracker" alt="Smart Tracker">
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Gadgets</span>
+                        <span class="product-card__name">Smart Tracker</span>
+                        <span class="product-card__price">₽6,750</span>
+                        <button class="product-card__button">Buy</button>
+                    </div>
+                </article>
+                <article class="product-card" data-category="gadgets">
+                    <div class="product-card__image">
+                        <img src="https://via.placeholder.com/600x750?text=Portable+Stand" alt="Portable Stand">
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Gadgets</span>
+                        <span class="product-card__name">Portable Stand</span>
+                        <span class="product-card__price">₽4,990</span>
+                        <button class="product-card__button">Buy</button>
+                    </div>
+                </article>
+                <article class="product-card" data-category="gadgets">
+                    <div class="product-card__image">
+                        <img src="https://via.placeholder.com/600x750?text=Slim+USB+Hub" alt="Slim USB Hub">
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Gadgets</span>
+                        <span class="product-card__name">Slim USB Hub</span>
+                        <span class="product-card__price">₽3,980</span>
+                        <button class="product-card__button">Buy</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="category-section" id="section-accessories">
+            <div class="products-intro">
+                <h2 class="section-title">Accessories</h2>
+                <p class="products-copy">Essential accessories to complement your tech setup.</p>
+            </div>
+
+            <div class="products-grid">
+                <article class="product-card" data-category="accessories">
+                    <div class="product-card__image">
+                        <img src="https://via.placeholder.com/600x750?text=Keyboard" alt="Minimal Keyboard">
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Accessories</span>
+                        <span class="product-card__name">Minimal Keyboard</span>
+                        <span class="product-card__price">₽9,500</span>
+                        <button class="product-card__button">Buy</button>
+                    </div>
+                </article>
+                <article class="product-card" data-category="accessories">
+                    <div class="product-card__image">
+                        <img src="https://via.placeholder.com/600x750?text=Mouse" alt="Minimal Mouse">
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Accessories</span>
+                        <span class="product-card__name">Minimal Mouse</span>
+                        <span class="product-card__price">₽4,250</span>
+                        <button class="product-card__button">Buy</button>
+                    </div>
+                </article>
+                <article class="product-card" data-category="accessories">
+                    <div class="product-card__image">
+                        <img src="https://via.placeholder.com/600x750?text=Laptop+Sleeve" alt="Laptop Sleeve">
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Accessories</span>
+                        <span class="product-card__name">Laptop Sleeve</span>
+                        <span class="product-card__price">₽6,150</span>
+                        <button class="product-card__button">Buy</button>
+                    </div>
+                </article>
+                <article class="product-card" data-category="accessories">
+                    <div class="product-card__image">
+                        <img src="https://via.placeholder.com/600x750?text=Desk+Mat" alt="Desk Mat">
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Accessories</span>
+                        <span class="product-card__name">Desk Mat</span>
+                        <span class="product-card__price">₽3,790</span>
+                        <button class="product-card__button">Buy</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 RSI hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const categoryBtns = document.querySelectorAll('.category-btn');
+            const searchInput = document.getElementById('product-search');
+            const productCards = document.querySelectorAll('.product-card');
+
+            // Handle category filtering and scrolling
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const category = this.getAttribute('data-category');
+
+                    // Update active button
+                    categoryBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Filter products and scroll
+                    if (category === 'all') {
+                        productCards.forEach(card => card.classList.remove('hidden'));
+                        // Smooth scroll to top of products
+                        document.querySelector('.products').scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                        productCards.forEach(card => {
+                            if (card.getAttribute('data-category') === category) {
+                                card.classList.remove('hidden');
+                            } else {
+                                card.classList.add('hidden');
+                            }
+                        });
+                        // Smooth scroll to the section
+                        const sectionId = 'section-' + category;
+                        document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+                    }
+
+                    // Clear search
+                    searchInput.value = '';
+                });
+            });
+
+            // Handle search filtering
+            searchInput.addEventListener('input', function () {
+                const searchTerm = this.value.toLowerCase();
+
+                productCards.forEach(card => {
+                    const name = card.querySelector('.product-card__name').textContent.toLowerCase();
+                    const category = card.querySelector('.product-card__category').textContent.toLowerCase();
+
+                    if (searchTerm === '') {
+                        card.classList.remove('hidden');
+                    } else if (name.includes(searchTerm) || category.includes(searchTerm)) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+
+                // Reset category buttons to 'all'
+                categoryBtns.forEach(b => b.classList.remove('active'));
+                document.querySelector('[data-category="all"]').classList.add('active');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
